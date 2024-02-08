@@ -8,7 +8,8 @@ require_once("layouts/header.php");
         foreach($value as $v):
         ?>
         <input type="text" value="<?php echo $v['nombre'] ?>" name="nombre"> <br>
-        <input type="text" value="<?php echo $v['precio'] ?>" name="precio"> <br>
+        <input type="text" value="<?php echo $v['rfc'] ?>" name="rfc"> <br>
+        <input type="text" value="<?php echo $v['domicilio'] ?>" name="domicilio"> <br>
         <input type="hidden" value="<?php echo $v['id'] ?>" name="id"> <br>
         <input type="submit" class="btn" name="btn" value="ACTUALIZAR"> <br>
         <input type="hidden" name="m" value="actualizar">

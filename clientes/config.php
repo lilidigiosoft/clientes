@@ -1,2 +1,2 @@
 <?php
-define("urlsite","http://localhost/mvc/");
+define("urlsite","http://localhost/clientes/");

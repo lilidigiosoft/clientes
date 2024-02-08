@@ -31,15 +31,16 @@ class modeloController{
     //editar
     static function editar(){    
         $id = $_REQUEST['id'];
-        $producto = new Modelo();
-        $dato = $producto->mostrar("productos","id=".$id);        
+        $cliente = new Modelo();
+        $dato = $cliente->mostrar("clientes","id=".$id);        
         require_once("vista/editar.php");
     }
     //actualizar
     static function actualizar(){
         $id = $_REQUEST['id'];
         $nombre= $_REQUEST['nombre'];
-        $precio= $_REQUEST['precio'];
+        $rfc= $_REQUEST['rfc'];
+        $domicilio= $_REQUEST['domicilio'];
         $data = "nombre='".$nombre."', rfc=".$rfc.";
         $cliente = new Modelo();
         $dato = $cliente->actualizar("clientes",$data,"id=".$id);
@@ -50,8 +51,8 @@ class modeloController{
     //eliminar
     static function eliminar(){    
         $id = $_REQUEST['id'];
-        $producto = new Modelo();
-        $dato = $producto->eliminar("productos","id=".$id);
+        $cliente = new Modelo();
+        $dato = $cliente->eliminar("clientes","id=".$id);
         header("location:".urlsite);
     }
 
