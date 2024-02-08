@@ -36,9 +36,9 @@ class Modelo{
         }
     }
     public function eliminar($tabla, $condicion){
-        $eli="delete from ".$tabla." where ".$condicion;
-        $res=$this->db->query($eli);
-        if ($res) {
+        $consul="delete from ".$tabla." where ".$condicion;
+        $resu=$this->db->query($consul);
+        if ($resu) {
             return true; 
         }else {
             return false;

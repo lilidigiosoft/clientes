@@ -40,12 +40,12 @@ class modeloController{
         $domicilio= $_REQUEST['domicilio'];
         $data = "nombre='".$nombre."', rfc=".$rfc."', domicilio= ".$domicilio."';
         $cliente = new Modelo();
-        $dato = $cliente->actualizar("clientes",$data,"id=".$id);
+        $dato = $cliente->actualizar("clientes",$data,"id=".$id); 
         header("location:".urlsite);
     }
 
 
-    //eliminar
+  
     static function eliminar(){     
         $id = $_REQUEST['id'];
         $condicion = "id=".$id;
