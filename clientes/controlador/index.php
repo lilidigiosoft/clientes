@@ -25,9 +25,6 @@ class modeloController{
         $dato = $cliente->insertar("clientes",$data);
         header("location:".urlsite);
     }
-
-
-
     //editar
     static function editar(){    
         $id = $_REQUEST['id'];
@@ -41,7 +38,7 @@ class modeloController{
         $nombre= $_REQUEST['nombre'];
         $rfc= $_REQUEST['rfc'];
         $domicilio= $_REQUEST['domicilio'];
-        $data = "nombre='".$nombre."', rfc=".$rfc.";
+        $data = "nombre='".$nombre."', rfc=".$rfc."', domicilio= ".$domicilio."';
         $cliente = new Modelo();
         $dato = $cliente->actualizar("clientes",$data,"id=".$id);
         header("location:".urlsite);
@@ -49,10 +46,11 @@ class modeloController{
 
 
     //eliminar
-    static function eliminar(){    
+    static function eliminar(){     
         $id = $_REQUEST['id'];
+        $condicion = "id=".$id;
         $cliente = new Modelo();
-        $dato = $cliente->eliminar("clientes","id=".$id);
+        $dato = $cliente->eliminar("clientes",$condition);
         header("location:".urlsite);
     }
 
